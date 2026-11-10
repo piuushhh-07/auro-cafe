@@ -1,0 +1,101 @@
+/* AURO HYBRID REDESIGN — Mediterranean editorial, cinematic warmth, restrained motion */
+:root {
+  --auro-ink: #263638;
+  --auro-blue: #456d76;
+  --auro-blue-deep: #294c54;
+  --auro-cream: #f7f3eb;
+  --auro-paper: #eee6d9;
+  --auro-terracotta: #b87558;
+  --auro-olive: #7d8065;
+  --auro-line: rgba(49, 67, 64, .17);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--auro-cream); color: #342d27; }
+::selection { background: #c9d8d3; color: var(--auro-ink); }
+:focus-visible { outline: 2px solid var(--auro-blue); outline-offset: 4px; }
+.topbar { background: var(--auro-ink); color: #f3e9d9; letter-spacing: .24em; }
+.nav { min-height: 88px; border-bottom: 1px solid var(--auro-line); box-shadow: 0 8px 30px rgba(38,54,56,.045); }
+.navlinks { gap: clamp(16px, 2.4vw, 34px); }
+.navlinks a { position: relative; }
+.navlinks a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -9px; height: 1px; background: var(--auro-blue); transition: right .3s ease; }
+.navlinks a:hover::after, .navlinks a:focus-visible::after { right: 0; }
+.nav .btn, .btn { border-radius: 2px; letter-spacing: .17em; transition: transform .3s ease, background .3s ease, border-color .3s ease; }
+.btn:hover { background: var(--auro-blue-deep); border-color: var(--auro-blue-deep); }
+.btn-light { border-color: var(--auro-line); }
+.hero { min-height: min(820px, calc(100svh - 100px)); height: min(900px, 88svh); isolation: isolate; }
+.hero::before { inset: 20px; border-color: rgba(255,249,239,.6); }
+.hero::after { content: "PALE GAON  ·  AMBERNATH  ·  INDIA"; letter-spacing: .28em; }
+.hero-inner { max-width: 1320px; }
+.hero h1 { max-width: 850px; font-size: clamp(64px, 10vw, 142px); letter-spacing: -.065em; }
+.hero h1 em { color: #e8c6a4; }
+.hero p { max-width: 430px; font-size: 14px; }
+.hero .eyebrow { color: #f1d9bd; }
+.hero .btn { background: #f6efe4; color: var(--auro-ink); border-color: #f6efe4; }
+.hero .btn:hover { background: #d7e0d8; border-color: #d7e0d8; color: var(--auro-ink); }
+.hero .btn-light { background: transparent; border-color: rgba(255,255,255,.65); color: white; }
+.hero .btn-light:hover { background: white; color: var(--auro-ink); }
+.boho-ribbon { background: #e5ddcf; color: var(--auro-ink); border-color: #d4c7b5; }
+.boho-ribbon-track b { color: var(--auro-blue); }
+.section { padding-top: clamp(76px, 9vw, 126px); padding-bottom: clamp(76px, 9vw, 126px); }
+.section h2 { color: var(--auro-ink); }
+.section h2 em, .page-hero h1 em { color: var(--auro-blue); }
+.eyebrow { color: #95694f; letter-spacing: .25em; }
+.split { gap: clamp(42px, 8vw, 112px); }
+.split-image { min-height: 430px; border-radius: 48% 48% 3px 3px / 30% 30% 3px 3px; box-shadow: 14px 14px 0 #ded0bd; }
+.split-image::after { inset: 13px; border: 1px solid rgba(255,255,255,.62); }
+.feature { background: rgba(255,252,246,.72); border: 1px solid var(--auro-line); border-top: 2px solid #b9a58e; }
+.feature h3 { color: var(--auro-ink); }
+.feature:hover { box-shadow: 0 18px 42px rgba(38,54,56,.09); }
+.food-card { border: 1px solid rgba(190,174,151,.5); border-radius: 3px 3px 26px 3px; overflow: hidden; background: #fffdf8; }
+.food-photo { height: 260px; }
+.food-card:hover { transform: translateY(-7px); box-shadow: 0 22px 48px rgba(38,54,56,.12); }
+.food-info h3 { color: var(--auro-ink); }
+.price { color: var(--auro-blue-deep); }
+.tag { border-radius: 30px; background: #e5e9df; color: #53665b; }
+.category-tile { background: #e7dfd1; color: var(--auro-ink); border: 1px solid rgba(69,109,118,.12); outline: 1px solid rgba(69,109,118,.12); outline-offset: -7px; }
+.category-tile:nth-child(3n+2) { background: #eaded1; }
+.category-tile:hover { background: var(--auro-blue-deep); color: #fffaf2; }
+.experience { gap: 20px; }
+.experience-card { border-radius: 48% 48% 3px 3px / 18% 18% 3px 3px; overflow: hidden; box-shadow: 0 12px 34px rgba(38,54,56,.1); }
+.experience-card::before { background: linear-gradient(transparent 28%, rgba(26,39,39,.8)); }
+.gallery-grid { gap: 16px; }
+.gallery-grid button, .gallery-grid div { border-radius: 3px 3px 38px 3px; overflow: hidden; }
+.gallery-grid button:hover, .gallery-grid div:hover { transform: translateY(-5px); filter: saturate(1.08); }
+.page-hero { background: linear-gradient(135deg, #eee7dc, #f8f4ed); }
+.page-hero h1 { color: var(--auro-ink); letter-spacing: -.05em; }
+.page-hero::before, .page-hero::after { color: rgba(69,109,118,.09); }
+.location-panel { background: #e5e7dc; }
+.location-panel::after { border-color: rgba(69,109,118,.45); }
+.location-panel .eyebrow { color: var(--auro-blue-deep); }
+.menu-tools input, .form-grid input, .form-grid textarea { border-color: #d8cbbb; background: #fffdf8; }
+.menu-tools input:focus, .form-grid input:focus, .form-grid textarea:focus { outline: 2px solid rgba(69,109,118,.35); border-color: var(--auro-blue); }
+.filter-btn.active, .cart-panel { background: var(--auro-blue-deep); border-color: var(--auro-blue-deep); }
+.footer { background: var(--auro-ink); }
+.footer .logo-sign { filter: brightness(0) invert(1) !important; }
+.footer-bottom { border-color: rgba(255,255,255,.2); }
+.mobile-menu { box-shadow: 0 18px 32px rgba(38,54,56,.1); }
+.legal-page { max-width: 850px; }
+.legal-page h1 { font-size: clamp(44px, 6vw, 72px); line-height: 1.05; color: var(--auro-ink); }
+.legal-page h2 { margin-top: 42px; font: 400 clamp(25px, 3vw, 34px)/1.2 var(--serif); color: var(--auro-ink); }
+@media (max-width: 900px) {
+  .nav { min-height: 80px; }
+  .mobile-menu { top: 80px; }
+  .split { gap: 44px; }
+}
+@media (max-width: 600px) {
+  .hero { min-height: 650px; height: 84svh; background-position: 60% center; }
+  .hero::before { inset: 10px; }
+  .hero h1 { font-size: clamp(54px, 14.5vw, 78px); line-height: .96; }
+  .hero p { max-width: 330px; font-size: 13px; }
+  .section { padding: 76px 22px; }
+  .split-image { min-height: 360px; height: 380px; }
+  .food-photo { height: 230px; }
+  .experience-card { height: 350px; }
+  .page-hero { padding: 78px 22px; }
+  .category-tile { min-height: 142px; }
+  .footer-grid { gap: 28px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
