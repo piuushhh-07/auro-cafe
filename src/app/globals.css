@@ -201,3 +201,8 @@ body{background-color:#f7f2e9}
 .nav .logo-sign{width:148px;height:auto;max-height:52px;object-fit:contain;filter:none!important;opacity:1!important}
 .footer .logo-sign{width:166px;height:auto;max-height:58px;object-fit:contain;filter:brightness(0) invert(1)!important;opacity:1!important}
 @media(max-width:600px){.nav .logo-sign{width:126px;max-height:45px}}
+
+/* Final logo: clean vector trace of the original AURO sign, dark on cream. */
+.nav .logo-sign{width:148px;height:auto;max-height:52px;object-fit:contain;filter:none!important;opacity:1!important;mix-blend-mode:normal}
+.footer .logo-sign{width:166px;height:auto;max-height:58px;object-fit:contain;filter:brightness(0) invert(1)!important;opacity:1!important;mix-blend-mode:normal}
+@media(max-width:600px){.nav .logo-sign{width:126px;max-height:45px}}
