@@ -24,7 +24,7 @@ export default function Home() {
   return <>
     <section className="hero">
       <div className="hero-inner">
-        <span className="eyebrow">A LITTLE HIDEAWAY IN PALE GAON</span>
+        <span className="eyebrow">A LITTLE MEDITERRANEAN HIDEAWAY IN PALE GAON</span>
         <h1>Come in.<br/><em>Slow down.</em><br/>Stay awhile.</h1>
         <p>Good coffee, comforting plates and the kind of cosy corner that makes you forget to check the time. Welcome to AURO.</p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 30 }}>
