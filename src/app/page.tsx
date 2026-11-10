@@ -12,11 +12,7 @@ export const metadata: Metadata = {
 };
 
 const picks = menuItems.filter(i => i.bestseller).slice(0, 6);
-const photos = [
-  "photo-1554118811-1e0d58224f24",
-  "photo-1517248135467-4c7edcad34c4",
-  "photo-1559339352-11d035aa65de"
-];
+const photos = ["/images/auro-interior-wide-1.webp", "/images/auro-interior-wide-2.webp", "/images/auro-counter-detail.webp"];
 const features: { Icon: LucideIcon; title: string; copy: string }[] = [
   { Icon: Coffee, title: "Coffee, Slowly", copy: "Take a pause with a freshly brewed favourite." },
   { Icon: Utensils, title: "Comfort on a Plate", copy: "Familiar cravings, deliciously taken care of." },
@@ -38,9 +34,15 @@ export default function Home() {
       </div>
     </section>
 
+    <div className="boho-ribbon" aria-hidden="true">
+      <div className="boho-ribbon-track">
+        {Array.from({ length: 4 }).map((_, i) => <span key={i}>SLOW MORNINGS <b>✳</b> GOOD COFFEE <b>✳</b> WARM COMPANY <b>✳</b> LITTLE MOMENTS <b>✳</b></span>)}
+      </div>
+    </div>
+
     <section className="section">
       <div className="wrap split">
-        <div className="split-image" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=88)" }}/>
+        <div className="split-image" style={{ backgroundImage: "url(/images/auro-interior-wide-1.webp)" }}/>
         <div>
           <span className="eyebrow">A SPACE TO FEEL AT HOME</span>
           <h2>Warm corners.<br/><em>Wandering conversations.</em></h2>
@@ -77,17 +79,17 @@ export default function Home() {
     <section className="section">
       <div className="wrap">
         <SectionTitle eyebrow="MAKE YOURSELF COMFORTABLE" title="Little moments look good here." copy="An easy coffee catch-up, a long lunch or an evening with your favourite people. Make AURO part of your story."/>
-        <div className="experience" style={{ marginTop: 38 }}>{photos.map((p, i) => <div className="experience-card" key={p} style={{ backgroundImage: `url(https://images.unsplash.com/${p}?auto=format&fit=crop&w=1000&q=88)` }}><h3>{["Coffee & Catch-ups", "Gather Around", "Evenings at AURO"][i]}</h3></div>)}</div>
+        <div className="experience" style={{ marginTop: 38 }}>{photos.map((p, i) => <div className="experience-card" key={p} style={{ backgroundImage: `url(${p})` }}><h3>{["Coffee & Catch-ups", "Gather Around", "Evenings at AURO"][i]}</h3></div>)}</div>
       </div>
     </section>
 
     <section className="section" style={{ background: "var(--ivory)" }}>
       <div className="wrap">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: 20, marginBottom: 30, flexWrap: "wrap" }}>
-          <SectionTitle eyebrow="A FEEL FOR THE PLACE" title="Earthy, easy, inviting." copy="A visual moodboard inspired by AURO's warm interior. Editorial photos are illustrative and should be replaced with café-owned images."/>
+          <SectionTitle eyebrow="A FEEL FOR THE PLACE" title="Earthy, easy, inviting." copy="Real moments and details from inside AURO CAFE."/>
           <Link className="btn btn-light" href="/gallery">View gallery</Link>
         </div>
-        <div className="gallery-grid">{["photo-1554118811-1e0d58224f24", "photo-1445116572660-236099ec97a0", "photo-1517248135467-4c7edcad34c4", "photo-1493857671505-72967e2e2760", "photo-1559339352-11d035aa65de"].map(p => <div key={p} style={{ backgroundImage: `url(https://images.unsplash.com/${p}?auto=format&fit=crop&w=900&q=85)` }}/>)}</div>
+        <div className="gallery-grid">{["/images/auro-interior-wide-1.webp", "/images/auro-interior-wide-2.webp", "/images/auro-counter-detail.webp", "/images/auro-ceiling-and-decor.webp"].map((src, i) => <div key={src} role="img" aria-label={["AURO CAFE interior", "AURO CAFE seating area", "AURO CAFE counter", "AURO CAFE ceiling and decor"][i]} style={{ backgroundImage: `url(${src})` }}/>)}</div>
       </div>
     </section>
 
