@@ -3,31 +3,27 @@ import { GalleryGrid } from "@/components/gallery-grid";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: "A warm, earthy visual moodboard inspired by the AURO CAFE interior in Ambernath.",
+  description: "Real photos of the AURO CAFE interior in Ambernath.",
   alternates: { canonical: "/gallery" }
 };
 
 const imgs: [string, string][] = [
-  ["The café mood", "photo-1554118811-1e0d58224f24"],
-  ["Coffee moments", "photo-1445116572660-236099ec97a0"],
-  ["Gather around", "photo-1517248135467-4c7edcad34c4"],
-  ["Natural textures", "photo-1493857671505-72967e2e2760"],
-  ["Warm evenings", "photo-1559339352-11d035aa65de"],
-  ["A little coffee break", "photo-1509042239860-f550ce710b93"],
-  ["Fresh plates", "photo-1540189549336-e6e99c3679fe"]
+  ["The café interior", "/images/auro-interior-wide-1.webp"],
+  ["Seating and atmosphere", "/images/auro-interior-wide-2.webp"],
+  ["The café counter", "/images/auro-counter-detail.webp"],
+  ["Ceiling and décor", "/images/auro-ceiling-and-decor.webp"]
 ];
 
 export default function Gallery() {
   return <>
     <section className="page-hero">
-      <span className="eyebrow">A FEEL FOR THE PLACE</span>
-      <h1>Little glimpses of AURO.</h1>
-      <p className="body-copy">Warm tones, slow moments and a little inspiration for your next visit.</p>
+      <span className="eyebrow">INSIDE AURO CAFE</span>
+      <h1>The real AURO, in pictures.</h1>
+      <p className="body-copy">A look at the actual spaces, details and atmosphere of our café.</p>
     </section>
     <section className="section">
       <div className="wrap">
         <GalleryGrid images={imgs}/>
-        <p className="body-copy" style={{ marginTop: 24 }}>These are illustrative editorial photographs, not verified photos of AURO CAFE. Replace them with original café, menu and team photographs before publishing as a real venue gallery.</p>
       </div>
     </section>
   </>;
