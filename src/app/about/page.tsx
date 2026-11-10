@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function About() {
   return <>
     <section className="page-hero">
-      <span className="eyebrow">THE AURO FEELING</span>
-      <h1>A cosy corner<br/><em>for the everyday.</em></h1>
+      <span className="eyebrow">A LITTLE MEDITERRANEAN SOUL</span>
+      <h1>Earthy by nature.<br/><em>Golden by feeling.</em></h1>
       <p className="body-copy" style={{ maxWidth: 650, margin: "auto" }}>A neighbourhood café made for good food, warm light and conversations that take their time.</p>
     </section>
     <section className="section">
