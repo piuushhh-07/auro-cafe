@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Coffee, Utensils, CakeSlice, Sun, ArrowUpRight, MapPin, type LucideIcon } from "lucide-react";
 import { SectionTitle } from "@/components/site-shell";
 import { menuItems, categories } from "@/data/menu";
 import { siteConfig } from "@/data/site-config";
+export const metadata: Metadata = { title: "A Mediterranean-Inspired Café in Ambernath", description: "Discover AURO CAFE in Pale Gaon, Ambernath — coffee, comfort food and Mediterranean-inspired moments.", alternates: { canonical: "/" } };
 const picks = menuItems.filter(i => i.bestseller).slice(0, 6);
 const photos = ["photo-1529156069898-49953e39b3ac", "photo-1517248135467-4c7edcad34c4", "photo-1515003197210-e0cd7184f7b5"];
 const features: { Icon: LucideIcon; title: string; copy: string }[] = [
