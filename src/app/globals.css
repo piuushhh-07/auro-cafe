@@ -89,3 +89,11 @@ body{background-color:var(--cream);background-image:radial-gradient(rgba(94,68,4
  .hero-inner,.hero:before,.hero-inner:after,.page-hero:before,.page-hero:after,.section>.wrap{animation:none!important}
  .section>.wrap{opacity:1;transform:none}
 }
+
+.boho-ribbon{overflow:hidden;background:#d9c5ad;color:#4a382d;padding:15px 0;border-top:1px solid #cbb69f;border-bottom:1px solid #cbb69f}
+.boho-ribbon-track{display:flex;width:max-content;animation:ribbon-drift 38s linear infinite}
+.boho-ribbon-track span{display:flex;align-items:center;gap:24px;padding-right:24px;white-space:nowrap;font-size:9px;font-weight:600;letter-spacing:.24em}
+.boho-ribbon-track b{font-size:17px;font-weight:400;color:var(--clay)}
+.boho-ribbon:hover .boho-ribbon-track{animation-play-state:paused}
+@keyframes ribbon-drift{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.boho-ribbon-track{animation:none}}
