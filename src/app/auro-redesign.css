@@ -242,3 +242,151 @@ body { background: var(--auro-cream); color: #342d27; }
 .map-caption { font-size:10px; }
 @media(max-width:900px) { .contact-layout { grid-template-columns:1fr; gap:40px; } }
 @media(max-width:600px) { .contact-card { min-height:320px; padding:34px; } .contact-map-section { padding:0 22px 68px; } .contact-map-section .map-frame { height:300px; } }
+
+
+/* RESPONSIVE SYSTEM — phones, tablets, laptops, desktops and wide screens */
+html, body { width:100%; max-width:100%; overflow-x:clip; }
+body { min-width:320px; }
+img, video, iframe { max-width:100%; }
+button, a, input, textarea, select { -webkit-tap-highlight-color:transparent; }
+.wrap, .hero-inner, .footer-grid, .footer-bottom { min-width:0; }
+.section > .wrap, .page-hero > .wrap, .legal-page { width:100%; }
+.split > *, .visit-layout > *, .contact-layout > *, .features > *, .menu-grid > *, .category-grid > *, .experience > *, .footer-grid > * { min-width:0; }
+.food-card img, .gallery-grid img { display:block; width:100%; height:100%; object-fit:cover; }
+.body-copy, .food-info p, .contact-details, .footer p, .footer a { overflow-wrap:anywhere; }
+
+/* Medium laptops and compact desktops */
+@media (min-width:901px) and (max-width:1180px) {
+  .nav { padding-inline:3.5vw; gap:18px; }
+  .navlinks { gap:clamp(12px,1.5vw,20px); font-size:9px; }
+  .nav-actions { gap:7px; }
+  .nav .btn { padding:12px 11px; font-size:8px; letter-spacing:.1em; }
+  .logo-sign { max-width:130px; }
+  .hero-inner { width:min(1240px,88%); }
+  .section { padding-inline:4vw; }
+  .features { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .menu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .footer-grid { grid-template-columns:1.3fr 1fr 1fr; }
+  .footer-grid > :first-child { grid-column:1/-1; }
+}
+
+/* Tablets and smaller laptops */
+@media (max-width:900px) {
+  .nav { height:76px; min-height:76px; padding-inline:5vw; }
+  .navlinks, .nav-actions { display:none !important; }
+  .mobile-toggle { display:grid; place-items:center; width:46px; height:46px; padding:0; border:1px solid var(--auro-line); border-radius:50%; background:rgba(255,255,255,.45); }
+  .mobile-toggle svg { width:22px; height:22px; }
+  .mobile-menu { display:flex; position:absolute; top:76px; left:0; right:0; z-index:50; max-height:calc(100svh - 76px); overflow-y:auto; padding:24px 6vw 30px; gap:0; background:rgba(247,243,235,.98); border-bottom:1px solid var(--auro-line); }
+  .mobile-menu a:not(.btn) { padding:14px 0; border-bottom:1px solid var(--auro-line); font-size:12px; letter-spacing:.12em; }
+  .mobile-menu .btn { align-self:flex-start; margin-top:20px; min-height:46px; }
+  .hero { min-height:620px; height:min(82svh,820px); }
+  .hero-inner { width:88%; }
+  .section { padding:clamp(68px,9vw,92px) 5vw; }
+  .split { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:36px; }
+  .split-image { height:440px; min-height:0; }
+  .features { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .menu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .experience { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .experience-card:last-child { grid-column:1/-1; }
+  .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:clamp(150px,24vw,220px); }
+  .gallery-grid > :first-child { grid-row:span 2; }
+  .gallery-grid > :last-child { grid-column:auto; }
+  .gallery-page .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .gallery-page .gallery-grid button:first-child { grid-row:span 2; }
+  .gallery-page .gallery-grid button:last-child { grid-column:auto; }
+  .footer { padding:64px 5vw 26px; }
+  .footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px 28px; }
+  .footer-grid > :first-child { grid-column:1/-1; }
+  .footer-bottom { gap:12px; flex-wrap:wrap; }
+  .menu-page-section .menu-cats { top:76px; }
+}
+
+/* Phones */
+@media (max-width:600px) {
+  .topbar { padding:9px 12px; font-size:8px; letter-spacing:.12em; line-height:1.5; }
+  .nav { height:72px; min-height:72px; padding-inline:18px; }
+  .nav .logo-sign { width:118px; max-height:42px; }
+  .nav .logo small { font-size:6px; letter-spacing:.18em; margin-top:6px; }
+  .mobile-toggle { width:42px; height:42px; }
+  .mobile-menu { top:72px; max-height:calc(100svh - 72px); padding:18px 22px 24px; }
+  .hero { min-height:620px; height:calc(88svh - 72px); max-height:780px; background-position:60% center; }
+  .hero-inner { width:calc(100% - 52px); }
+  .hero h1 { max-width:100%; font-size:clamp(48px,13.2vw,72px); overflow-wrap:normal; }
+  .hero p { max-width:34ch; font-size:13px; line-height:1.8; }
+  .hero-actions { align-items:stretch; }
+  .hero-actions .btn { min-height:46px; padding:13px 15px; font-size:9px; }
+  .hero:before { inset:9px; }
+  .hero-scroll { bottom:18px; }
+  .hero-index { bottom:18px; }
+  .section { padding:68px 21px; }
+  .section h2 { font-size:clamp(35px,9.5vw,48px); }
+  .split { grid-template-columns:minmax(0,1fr); gap:34px; }
+  .split-image { height:clamp(290px,92vw,390px); min-height:0; box-shadow:9px 9px 0 #d9c5ad; }
+  .features { grid-template-columns:minmax(0,1fr); gap:12px; margin-top:30px; }
+  .feature { min-height:0; padding:25px 22px; }
+  .menu-grid { grid-template-columns:minmax(0,1fr); gap:18px; }
+  .food-photo { height:clamp(220px,68vw,300px); }
+  .food-info { padding:21px; }
+  .category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .category-tile { min-height:128px; padding:15px; }
+  .category-tile > span:nth-child(2) { font-size:18px; }
+  .experience { grid-template-columns:minmax(0,1fr); gap:16px; }
+  .experience-card, .experience-card:last-child { grid-column:auto; height:340px; min-height:340px; }
+  .experience-card-2 { transform:none; }
+  .gallery-grid, .gallery-teaser .gallery-grid, .gallery-page .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:clamp(125px,38vw,170px); gap:9px; }
+  .gallery-grid > :first-child, .gallery-page .gallery-grid button:first-child { grid-row:span 2; }
+  .gallery-grid > :last-child, .gallery-page .gallery-grid button:last-child { grid-column:auto; }
+  .section-heading-row { align-items:flex-start; gap:10px; }
+  .section-heading-row .text-link { margin-top:8px; }
+  .visit-layout { grid-template-columns:minmax(0,1fr); gap:28px; }
+  .visit-layout .location-panel, .location-panel { padding:30px 25px; }
+  .visit-layout h2 { font-size:clamp(42px,11vw,58px); }
+  .page-hero, .story-hero, .gallery-hero, .menu-hero { padding:72px 21px; }
+  .story-hero h1, .gallery-hero h1, .menu-hero h1, .contact-hero h1 { font-size:clamp(43px,12vw,66px); }
+  .page-hero-mark { font-size:150px; }
+  .menu-page-section { padding-top:52px; }
+  .menu-page-section .menu-cats { top:72px; margin-inline:-21px; padding:12px 21px 15px; }
+  .menu-cats { gap:7px; }
+  .menu-cats button, .filter-btn { min-height:40px; padding:10px 12px; }
+  .menu-tools { gap:9px; }
+  .menu-tools input { min-width:0; width:100%; flex-basis:100%; min-height:46px; }
+  .contact-layout { grid-template-columns:minmax(0,1fr); gap:30px; }
+  .contact-card { min-height:0; padding:32px 25px; }
+  .contact-details > * { align-items:flex-start; }
+  .contact-map-section { padding:0 21px 60px; }
+  .contact-map-section .map-frame, .map-frame { height:280px; }
+  .form-grid { grid-template-columns:minmax(0,1fr); }
+  .form-grid textarea { grid-column:auto; }
+  .form-grid input, .form-grid textarea { min-height:46px; font-size:16px; }
+  .footer { padding:54px 22px 24px; }
+  .footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 18px; }
+  .footer-grid > :first-child { grid-column:1/-1; }
+  .footer-grid > :last-child { grid-column:1/-1; }
+  .footer-bottom { margin-top:30px; flex-direction:column; align-items:flex-start; font-size:8px; }
+  .legal-page { padding:8px 0; }
+  .legal-page h1 { font-size:clamp(40px,11vw,58px); }
+  .legal-page h2 { font-size:25px; }
+  .cart-panel { right:12px; bottom:12px; max-width:calc(100vw - 24px); }
+}
+
+/* Very small phones */
+@media (max-width:380px) {
+  .nav { padding-inline:14px; }
+  .nav .logo-sign { width:108px; }
+  .hero-inner { width:calc(100% - 44px); }
+  .hero h1 { font-size:clamp(45px,12.5vw,54px); }
+  .hero-actions { flex-direction:column; align-items:flex-start; }
+  .hero-actions .btn { width:100%; max-width:230px; }
+  .category-grid { gap:8px; }
+  .category-tile { min-height:118px; padding:12px; }
+  .footer-grid { grid-template-columns:minmax(0,1fr); }
+  .footer-grid > * { grid-column:auto !important; }
+}
+
+/* Short landscape phones: keep the first screen usable without clipping content. */
+@media (max-height:520px) and (orientation:landscape) and (max-width:900px) {
+  .hero { min-height:520px; height:auto; }
+  .hero-inner { padding-block:90px 80px; }
+  .hero h1 { font-size:clamp(48px,8vw,76px); }
+}
