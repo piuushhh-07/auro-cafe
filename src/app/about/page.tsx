@@ -16,7 +16,7 @@ export default function About() {
     </section>
     <section className="section">
       <div className="wrap split">
-        <div className="split-image" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1200&q=88)" }}/>
+        <div className="split-image" style={{ backgroundImage: "url(/images/auro-interior-wide-2.webp)" }}/>
         <div>
           <SectionTitle eyebrow="SLOW DOWN. STAY A WHILE." title="The beauty is in the little moments."/>
           <p className="body-copy">We believe a café should be more than a quick stop. It can be the place where a conversation runs longer, a familiar coffee becomes a ritual, and an ordinary afternoon turns into a memory.</p>
