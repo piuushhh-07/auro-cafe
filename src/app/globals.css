@@ -107,3 +107,12 @@ body{background-color:var(--cream);background-image:radial-gradient(rgba(94,68,4
 .footer-logo .logo-wordmark{color:#fff8ee;font-size:58px;padding:0}
 .footer-logo small{color:#d7c8b8;text-align:left}
 @media(max-width:600px){.logo-wordmark{font-size:47px}.logo small{font-size:6px;letter-spacing:.23em;margin-top:8px}}
+
+/* Use the actual AURO illuminated sign artwork, not a substitute typeface. */
+.logo{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;letter-spacing:0}
+.logo-sign{display:block;width:148px;height:auto;max-height:52px;object-fit:contain}
+.logo small{font-size:7px;letter-spacing:.28em;margin-top:8px;white-space:nowrap}
+.footer-logo{align-items:flex-start;margin-bottom:18px}
+.footer-logo .logo-sign{width:166px;max-height:58px}
+.footer-logo small{color:#d7c8b8;text-align:left}
+@media(max-width:600px){.logo-sign{width:126px;max-height:45px}.logo small{font-size:6px;letter-spacing:.23em;margin-top:7px}}
