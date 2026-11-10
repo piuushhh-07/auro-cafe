@@ -38,6 +38,12 @@ export default function Home() {
       </div>
     </section>
 
+    <div className="boho-ribbon" aria-hidden="true">
+      <div className="boho-ribbon-track">
+        {Array.from({ length: 4 }).map((_, i) => <span key={i}>SLOW MORNINGS <b>✳</b> GOOD COFFEE <b>✳</b> WARM COMPANY <b>✳</b> LITTLE MOMENTS <b>✳</b></span>)}
+      </div>
+    </div>
+
     <section className="section">
       <div className="wrap split">
         <div className="split-image" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=88)" }}/>
