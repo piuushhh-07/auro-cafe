@@ -129,7 +129,7 @@ html{scroll-padding-top:104px}
 body{background-color:#f7f2e9}
 .topbar{background:#293b3d;color:#eee4d5}
 .nav{box-shadow:0 5px 24px rgba(53,42,32,.045)}
-.nav .logo-sign{filter:drop-shadow(0 1px 0 rgba(53,42,32,.04))}
+.nav .logo-sign{filter:none}
 .navlinks a:hover{color:var(--aegean-deep)}
 .navlinks a:after{background:var(--aegean)}
 .btn{border-radius:2px;letter-spacing:.18em}
@@ -173,7 +173,7 @@ body{background-color:#f7f2e9}
 .page-hero:before,.page-hero:after{color:rgba(84,123,136,.10)}
 .page-hero h1{letter-spacing:-.045em}
 .footer{background:#293b3d}
-.footer .logo-sign{filter:brightness(1.04)}
+.footer .logo-sign{filter:brightness(0) invert(1)}
 .footer-bottom{border-color:rgba(235,226,209,.2)}
 .form-grid input:focus,.form-grid textarea:focus,.menu-tools input:focus{outline:2px solid rgba(84,123,136,.45);border-color:var(--aegean)}
 .filter-btn.active{background:var(--aegean-deep);border-color:var(--aegean-deep)}
