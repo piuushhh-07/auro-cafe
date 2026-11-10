@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "AURO CAFE",
-  tagline: "Escape the Ordinary. Taste the Mediterranean.",
-  description: "Discover beautiful flavours, freshly brewed coffee, delicious bites, and moments worth sharing at AURO CAFE in Pale Gaon, Ambernath.",
+  tagline: "Good coffee. Warm corners. Time well spent.",
+  description: "Discover freshly brewed coffee, comforting food and a cosy, earthy café atmosphere at AURO CAFE in Pale Gaon, Ambernath.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://auro-cafe.vercel.app",
   address: "Pale Rd, next to Royal Flora, behind Anand Sagar Resort & water park, Pale Gaon, Ambernath, Maharashtra 421506, India",
   phone: process.env.NEXT_PUBLIC_PHONE || "",
